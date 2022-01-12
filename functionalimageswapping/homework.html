@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <!-- Author:R.J. Morgan
+            Class: CIS 131
+            Section: 102
+            Date Created: August 25, 2020
+            Assignment Name: About You in Review
+            Filename: index.html
+            Validated: September 3, 2020
+            Container for FUNCTIONAL IMAGE SWAPPING lines 39 - 70 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/styles.css">             
+        <title>RJ Morgan</title>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark my-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" id="ultraspecial" href="homework.html">Homework</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="hobbies.html">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="covid.html">COVID Me</a>
+                </li>                  
+            </ul>
+        </nav> <!-- END NAV -->
+        <!-- Look here for latest assignment-->
+        <div class="container"> 
+            <div class="row"> <!--Appears as the two darker containers inside a larger container below "About Me"-->                
+                <!--Begin Functional Image Swapping Assignment
+                
+                Assignment Name: Fuctional Image Swapping
+                Author: R.J. Morgan
+                Class: CIS 131
+                Section: 102
+                Date Created: September 10, 2020  
+                Code on lines: 79-97, and javascript tag on line 150
+                -->
+                <div class="col-lg-6 container"> <!-- container for dice-->                    
+                    <h1>Functional Image Swapping</h1>
+                    <h1>(Loaded Dice)</h1>
+                    <hr>   
+                    <p>These dice images are left over from the C# "Petals Around the Rose" assignment -- figured I should use them again. Click on a small image to change the large image. Click and double click on the large image to get new dice, or to reset the rose.</p>
+                    <div class="maincontain">
+                        <img src="images/rose.png" alt="" title="" id="pictop" class="image3" />
+                    </div> <!-- div class="maincontain" -->       
+                    
+                    <div class="container2">
+                        <div class="two">
+                            <img src="images/die_01.png" alt="uno" class="image4" id="die1" onclick="changer(this)"/>
+                        </div>
+                        <div class="two">
+                            <img src="images/die_03.png" alt="dos" class="image4" id="die2" onclick="changer(this)"/>
+                        </div>
+                        <div class="two">
+                            <img src="images/die_05.png" alt="tres" class="image4" id="die3"  onclick="changer(this)"/>
+                        </div>         
+                    </div><!--Ends div class container2-->                    
+                </div> <!-- div class="col-lg-5 container"  container for dice  and THE FUNCTIONAL IMAGE ASSIGMENT PORTION-->
+
+                <!-- Subscribe to my website -->
+                <div class="col-lg-5 container">
+                    <h1>Subscribe to My Website</h1>
+                    <hr>      
+                    <form>
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" id="fname" placeholder="First Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" id="lname" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="lname">Petal Count</label>
+                          <input type="text" class="form-control" id="lname" placeholder="How many petals are present right now?">
+                      </div>
+
+                        <div class="form-group">
+                            <label for="prefcontact">Preferred Method of Contact</label>
+                            <select class="form-control" id="prefcontact">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Mail">Mail</option>                        
+                            </select>
+                        </div>
+
+                        <!--String message-->
+                        <input class="btn btn-dark mb-3" type="button" value="Subscribe" 
+                        onclick="document.getElementById('unique').innerHTML = 'Hi ' + document.getElementById('fname').value + ' ' + document.getElementById('lname').value + '. You have chosen to subscribe by ' + document.getElementById('prefcontact').value + '.'; 
+                        document.getElementById('one').innerHTML = document.getElementById('fname').value;                             
+                        document.getElementById('two').innerHTML = document.getElementById('lname').value;
+                        document.getElementById('three').innerHTML = document.getElementById('prefcontact').value;" />
+                    
+                    </form>
+
+                    <div class="mb-3" id="unique">
+                        <p>Your info will show here when you hit the subscribe button.</p>                
+                    </div>
+                
+                    <div class="justaclass">
+                        <!--Updating list group-->
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item" id="one">Your first name here</li>
+                            <li class="list-group-item" id="two">Your last name here</li>
+                            <li class="list-group-item" id="three">Your method of subscription here</li>
+                        </ul> 
+                    </div><!-- closes justaclass-->  
+                </div> <!-- closes container and subscribe to my website-->   
+                
+            </div> <!-- end div class="row"--> 
+        </div><!-- div class="container"--> 
+
+        <!--Pick a Fish -->
+        <div class="container">
+            <h1>Pick a Fish, Any Fish</h1>
+            <hr>   
+            <div class="maincontain">
+              <img src="images/smallie01.jpg" alt="" title="" id="fishImg" class="image1" />
+              
+            </div>
+        
+            <div class="container2">
+              <div class="two">
+                <img src="images/smallie01.jpg" alt="controller" id="controller1" class="image2" onclick="document.getElementById('fishImg').src = 'images/smallie01.jpg'"/>
+              </div>
+              <div class="two">
+                <img src="images/smallie02.jpg" alt="controller" id="controller2" class="image2" onclick="document.getElementById('fishImg').src = 'images/smallie02.jpg'"/>
+              </div>
+              <div class="two">
+                <img src="images/smallie03.jpg" alt="controller" id="controller3" class="image2" onclick="document.getElementById('fishImg').src = 'images/smallie03.jpg'"/>
+              </div>
+              <div class="two">
+                <img src="images/smallie04.jpg" alt="controller" id="controller4" class="image2" onclick="document.getElementById('fishImg').src = 'images/smallie04.jpg'"/>
+              </div>       
+            </div>
+        </div> <!-- End fish picture container-->
+
+        <!-- Contact Form -->
+        <div class="container">
+            <h1>Contact Form</h1>
+            <hr>
+            <div class="row">
+      
+              <div class="col-lg-6">
+                <p>My contact information is below. If you would like me to reach out to you, please complete and submit the form to the right.</p>
+                <p>Email: rm0934936@otc.edu</p>
+                <p>Phone: (417) 403-9399</p>
+                <hr>
+                <p class="fancy">Important note - The form to the right is NOT the "Subscribe to My Website" assignment submission. This specific page, as well as the others, are included to provide a professional looking home for the form assignment. If you have reached this page intending to find the other, go to the HOME page, look at the family photo, and scroll down. Thank you.</p>
+              </div>
+      
+              <div class="col-lg-6">
+                
+      
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email address">        
+                </div>
+      
+                <div class="form-group">
+                  <label for="dropdownbox">Favorite Ice Cream Flavor</label>
+                  <select class="form-control" id="dropdownbox">
+                    <option>Rocky Road</option>
+                    <option>Mint Chocolate Chip</option>
+                    <option>Chocolate Chip Cookie Dough</option>
+                    <option>Phish Food</option>
+                    <option>I don't like ice cream</option>
+                  </select>
+                </div>
+      
+                <div class="form-group">
+                  <label for="textbox">Thoughts on silverware versus plasticware</label>
+                  <textarea class="form-control" id="textbox" rows="3" placeholder="Please, keep your opinions civil"></textarea>
+                </div>
+      
+                <button type="button" class="btn btn-dark btn-block">Submit</button>
+              </div>  
+                
+            </div>
+            
+        </div> <!-- End CONTACT FORM picture container-->
+
+        <script src="scripts.js"></script> 
+
+        <footer class="navbar-dark bg-dark">
+            RJ Morgan &copy; CIS 131
+        </footer>
+      
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <body>
+    
+</body>
+</html>
