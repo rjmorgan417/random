@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* Author:R.J. Morgan
+    Class: CIS 131
+    Section: 102
+		Date Created: September 19, 2020
+		Assignment Name: Cheech's Pizza
+		Filename: styles.css
+		Validated: September 20, 2020
+*/
+
+.nav-item, .nav-link:link { 
+  color:black;
+}
+
+.nav-link:visited, footer, .container{  
+  color:white;
+}
+
+/* mouse over link */
+.nav-link:hover {
+   
+  color:yellow;
+}
+
+.my-nav .active {
+  background-color: maroon;   
+}
+
+/* The navigation bar */
+.navbar {   
+  position: fixed; 
+  top: 0; 
+  width: 100%;  
+  z-index: 1;
+}
+
+body {
+  background: url("../images/pizza.jpg");
+  background-size: 100%; 
+  min-height:400px;
+  margin-bottom: 200px;
+  margin-top: 50px;
+  clear: both;
+}
+
+.container {
+  background: rgba(117, 13, 13, 0.6);  
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgb(253, 249, 12);  
+  margin-bottom: 10px;	 
+}
+
+#header, #cheech {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header { 
+  width: 50%;
+}
+
+#cheech {
+  width: 100%;
+} 
+
+hr {
+  background: yellow;
+}
+
+footer{
+  position: fixed;
+  bottom: 0px;
+  padding: 15px; 
+  width: 100%;    
+}
+
+footer, .btn{
+  text-align: center;  
+}
+
+#one, #two {
+  padding: 20px;
+  list-style-type: none; 
+}
+
+a, .form-group, footer, .btn, .selector, .container  {
+  font-family: "calibri", "arial", sans-serif;
+  color: antiquewhite;  
+}
+
+a, .form-group, footer, .btn, .selector, .container  {
+
+  font-size: 20px;
+}
+
+#one, #two {
+  font-size: 30px;
+}
+
+h1 {
+  font-family: 'Eater', cursive;
+  font-size: 40px;
+}
+
+.btn, .selector {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: yellow;
+  padding: 14px 28px;  
+  cursor: pointer;  
+  margin-top: 5px;
+  color: black;
+}
+
+.selector{
+  text-align: left;
+}
